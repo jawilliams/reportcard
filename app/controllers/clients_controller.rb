@@ -9,7 +9,7 @@ class ClientsController < ApplicationController
     @client = Client.new
   end
   def create
-    @client = Client.find(params[:client])
+    @client = Client.new(params[:client])
     @client.save
     redirect_to clients_path
   end
