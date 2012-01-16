@@ -1,0 +1,10 @@
+<%= form_for @client do |f| %>
+  <%=f.label :name %>
+  <%=f.text_field :name %><br />
+  <%=f.label :cuid %>
+  <%=f.text_field :cu_id %><br />
+  <%=f.label :nsversion %>
+  <%=f.text_field :nsversion %><br />
+  <%=f.submit 'Create' %><br />
+  <%=link_to 'Cancel', clients_path%>
+<% end %>

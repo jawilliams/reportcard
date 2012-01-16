@@ -1,0 +1,23 @@
+<h1> Listing Credit Unions </h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>CUID</th>
+    <th>Version</th>
+  </tr>
+
+<% @clients.each do |client| %>
+  <tr>
+    <td><%=client.id%></td>
+    <td><%=client.name%></td>
+    <td><%=client.cu_id%></td>
+    <td><%=client.nsversion%></td>
+    <td><%=link_to 'Show', client %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<%=link_to 'New Client', new_client_path %>
+

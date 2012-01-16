@@ -1,6 +1,6 @@
 class ClientsController < ApplicationController
   def index
-    @clients = Clients.all
+    @clients = Client.all
   end
   def show
     @client = Client.find(params[:id])
